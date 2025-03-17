@@ -1,0 +1,2720 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://ciiae.org/ontologies/untitled-ontology-44#"
+     xml:base="https://ciiae.org/ontologies/untitled-ontology-44"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://ciiae.org/ontologies/OntoCIIAE"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#articleWrittenBy -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#articleWrittenBy">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#writeAnArticle"/>
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:range rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>Publication written by is the relation between a publication and the staff member that wrote it.</rdfs:comment>
+        <rdfs:label>publicationWrittenBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#belongToDepartment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#belongToDepartment">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#hasAssigned"/>
+        <rdfs:domain rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:comment>Belong to department is the relation between a staff member and the department in which he/she works.</rdfs:comment>
+        <rdfs:label>belongToDepartment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#carriedOutInEqmModule -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#carriedOutInEqmModule">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#eqmModuleCarriesOutExperiment"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:comment>Carried out in eqm module is the relation between an experiment and an equipment module used to carry out that experiment.</rdfs:comment>
+        <rdfs:label>carriedOutInEqmModule</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#collaboratesInProject -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#collaboratesInProject">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isCollaboratedByResearchers"/>
+        <rdfs:domain rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Collaborates in project is the relation between the different researchers that are involved in a project and the project itself.</rdfs:comment>
+        <rdfs:label>collaboratesInProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#cooperatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#cooperatedBy">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#cooperatesIn"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:comment>Cooperated by organizations is the relation by a project and the rest of the organizations that help CIIAE in its development.</rdfs:comment>
+        <rdfs:label>cooperatedByOrganizations</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#cooperatesIn -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#cooperatesIn">
+        <rdfs:domain rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Cooperates in project is the relation between an external organization and a project where it is involved helping the CIIAE.</rdfs:comment>
+        <rdfs:label>cooperatesInProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#coordinates -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#coordinates">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isCoordinatedByResearcher"/>
+        <rdfs:domain rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Coordinates project is the relation between a researcher that manages and leads a project and the project itself.</rdfs:comment>
+        <rdfs:label>coordinatesProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#coordinatorOfResearchLine -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#coordinatorOfResearchLine">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#researchLineCoordinatedBy"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SeniorDoctor"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:comment>Coordinator of Research Line is the relation between a senior doctor or a director that is the coordinator of a research line and that research line.</rdfs:comment>
+        <rdfs:label>coordinatorOfResearchLine</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#departmentHeadedBy -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#departmentHeadedBy">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#headsDepartment"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:comment>Department headed by is the relation between a department and the director that heads it.</rdfs:comment>
+        <rdfs:label>departmentHeadedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#departmentRelatedWithProject -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#departmentRelatedWithProject">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isRelatedWithDepartment"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Department related with project is the relation between a department and a project that is/was been developed in it.</rdfs:comment>
+        <rdfs:label>departmentRelatedWithProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#eqmModuleCarriesOutExperiment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#eqmModuleCarriesOutExperiment">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Eqm module carries out experiment is the relation between an equipment module and an experiment carried out in it</rdfs:comment>
+        <rdfs:label>eqmModuleCarriesOutExperiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#equipmentLocated -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#equipmentLocated">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#locatedIn"/>
+        <rdfs:domain rdf:resource="http://schema.org/Place"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Equipment located in it is the relation between an installation and every equipment ubicated in it.</rdfs:comment>
+        <rdfs:label>equipmentLocatedInIt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#finances -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#finances">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isFinancedBy"/>
+        <rdfs:domain rdf:resource="http://purl.org/cerif/frapo/FundingAgency"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Finances is the relation between an organization and the project financed by it.</rdfs:comment>
+        <rdfs:label>finances</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#formPartOfProject -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#formPartOfProject">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isDividedInto"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Is related with project is the relation between a scientific experiment and the project where it is involucrated.</rdfs:comment>
+        <rdfs:label>isRelatedWithProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#groupEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#groupEquipment">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#groupedInEquipmenModule"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Group equipment is the relation between an equipment module and equipments that belong to it.</rdfs:comment>
+        <rdfs:label>groupEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#groupedInEquipmenModule -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#groupedInEquipmenModule">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:comment>Grouped in equipment module is the relation between an equipment and the equipment module to which it belongs.</rdfs:comment>
+        <rdfs:label>groupedInEquipmentModule</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#hasAssigned -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#hasAssigned">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:range rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>Has assigned is the relation between a department of the organization and the staff members that work under it.</rdfs:comment>
+        <rdfs:label>hasAssigned</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#hasPublications -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#hasPublications">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isPublicationOfProject"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>Has publication is the relation between a project and a publication about one or more experiments related to it.</rdfs:comment>
+        <rdfs:label>hasPublication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#headsDepartment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#headsDepartment">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:comment>Heads department is the relation between a director and the department headed by him/her.</rdfs:comment>
+        <rdfs:label>headsDepartment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isCarriedOutInEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isCarriedOutInEquipment">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isRequiredIn"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Is carried out in equipment is the relation between an experiment and an equipment which is necessary in order to complete the experiment.</rdfs:comment>
+        <rdfs:label>isCarriedOutInEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isCollaboratedByResearchers -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isCollaboratedByResearchers">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>Is collaborated by researchers is the relation between a project and every researcher who is involved in it.</rdfs:comment>
+        <rdfs:label>isCollaboratedByResearchers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isCoordinatedByResearcher -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isCoordinatedByResearcher">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>Is coordinated by researcher is the relation between a project and the researcher in charge of it.</rdfs:comment>
+        <rdfs:label>isCoordinatedByResearcher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isDividedInto -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isDividedInto">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Is divided into is the relation existing between a project and the different experiments carried out in order to complete it.</rdfs:comment>
+        <rdfs:label>isDividedInto</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isFinancedBy -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isFinancedBy">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://purl.org/cerif/frapo/FundingAgency"/>
+        <rdfs:comment>Is financed by is the relation between a project developed by the CIIAE and the organization that financed it.</rdfs:comment>
+        <rdfs:label>isFinancedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isLedByResearcher -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isLedByResearcher">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#leadsExperiment"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>Is led by researcher is the relation between an experiment and the researcher that leads/led it.</rdfs:comment>
+        <rdfs:label>isLedByResearcher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isMadeByResearcher -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isMadeByResearcher">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#makesExperiment"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>Is made by researcher is the relation between an experiment and the researcher that did it.</rdfs:comment>
+        <rdfs:label>isMadeByResearcher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isPublicationOfProject -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isPublicationOfProject">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Is publication of project is the relation between a publication and the project whose experiments appear in it.</rdfs:comment>
+        <rdfs:label>isPublicationOfProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isRelatedWithDepartment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isRelatedWithDepartment">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:comment>Is related with department is the relation between a project and the department where it is/was been developed.</rdfs:comment>
+        <rdfs:label>isRelatedWithDepartment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isRequiredIn -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isRequiredIn">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Is required in is the relation between an equipment and an experiment where it is neccessary in order to complete that experiment.</rdfs:comment>
+        <rdfs:label>carriesOutExperimentInIt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#leadsExperiment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#leadsExperiment">
+        <rdfs:domain rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Leads experiment is the relation between a researcher and the experiments that he/she leads/led.</rdfs:comment>
+        <rdfs:label>leadsExperiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#locatedIn">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>Located in installation is the relation between an equipment and the installation where it is ubicated.</rdfs:comment>
+        <rdfs:label>locatedInInstallation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#makesExperiment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#makesExperiment">
+        <rdfs:domain rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Makes experiment is the relation of carrying out an experiment by a researcher.</rdfs:comment>
+        <rdfs:label>makesExperiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#measureInstrumentRelatedWithChEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#measureInstrumentRelatedWithChEquipment">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#relatedWithMeasureInstrument"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment"/>
+        <rdfs:comment>Measure instrument related with ch equipment is the relation between a measure instrument that is measuring and recording a relevant property for an experiment and the characterization equipment where it is recording.</rdfs:comment>
+        <rdfs:label>measureInstrumentRelatedWithChEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#projectRelatedWithResearchLine -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#projectRelatedWithResearchLine">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#researchLineRelatedWithProject"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:comment>Project related with research line is the relation between a project and the research line associated with it.</rdfs:comment>
+        <rdfs:label>projectRelatedWithResearchLine</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#relatedToArticle -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#relatedToArticle">
+        <owl:inverseOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#relatedToExperiment"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:range rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>Related to publication is the relation between one experiment and the publication where the researchers have published it.</rdfs:comment>
+        <rdfs:label>relatedToPublication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#relatedToExperiment -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#relatedToExperiment">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Related to experiment is the relation between a publication and the different experiments that appear in it.</rdfs:comment>
+        <rdfs:label>relatedToExperiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#relatedWithMeasureInstrument -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#relatedWithMeasureInstrument">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument"/>
+        <rdfs:comment>Related with measure instrument is the relation between a characterization equipment and a measure instrument that is measuring and recording a relevant property for an experiment.</rdfs:comment>
+        <rdfs:label>relatedWithMeasureInstrument</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#researchLineCoordinatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#researchLineCoordinatedBy">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:range rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SeniorDoctor"/>
+        <rdfs:comment>Research line coordinated by is the relation between a research line and the director or senior doctor that coordinates it.</rdfs:comment>
+        <rdfs:label>researchLineCoordinatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#researchLineRelatedWithProject -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#researchLineRelatedWithProject">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:range rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Research line related with project is the relation between a research line and a project associated with it.</rdfs:comment>
+        <rdfs:label>researchLineRelatedWithProject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#writeAnArticle -->
+
+    <owl:ObjectProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#writeAnArticle">
+        <rdfs:domain rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:range rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>Is author of publication is the relation between a staff member (or a group of staff members) and a publication created by him/her/them.</rdfs:comment>
+        <rdfs:label>isAuthorOfPublication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.archiveshub.ac.uk/def/file -->
+
+    <owl:DatatypeProperty rdf:about="http://data.archiveshub.ac.uk/def/file">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The data File value represents the name of the file where the data about the experiment or the publication is stored.</rdfs:comment>
+        <rdfs:label>dataFile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.archiveshub.ac.uk/def/location -->
+
+    <owl:DatatypeProperty rdf:about="http://data.archiveshub.ac.uk/def/location">
+        <rdfs:domain rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The location represents the place where an installation is.</rdfs:comment>
+        <rdfs:label>location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.businessgraph.io/ontology#isPublic -->
+
+    <owl:DatatypeProperty rdf:about="http://data.businessgraph.io/ontology#isPublic">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Is public establishes whether the data of the experiment/project/department it is referred to can be available for external organizations or not.</rdfs:comment>
+        <rdfs:label>isPublic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/area -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/area">
+        <rdfs:domain rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>The area value represents the area of the installation in squared meters.</rdfs:comment>
+        <rdfs:label>area</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iais.fraunhofer.de/vocabs/rami#manual -->
+
+    <owl:DatatypeProperty rdf:about="http://iais.fraunhofer.de/vocabs/rami#manual">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>The manual value stores the name of the manual file of the equipment.</rdfs:comment>
+        <rdfs:label>manual</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasEndDate">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The end date is the date on which something such as a contract, right, or legal obligation ends.</rdfs:comment>
+        <rdfs:label>endDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/hasProjectIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasProjectIdentifier">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The public identifier of a project is the identifier of that project that is shared with the organization which is interested in it.</rdfs:comment>
+        <rdfs:label>hasProjectIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/hasStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/cerif/frapo/hasStartDate">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The start date is the date when the project development is initiated.</rdfs:comment>
+        <rdfs:label>startDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Date is the day of realisation when an experiment has been executed or the day of the publication of an academic article or a technical report.</rdfs:comment>
+        <rdfs:label>date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:comment>A description is a written account of an experiment/department/publication detailing qualitative characteristics of that experiment/department/publication.</rdfs:comment>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:domain rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The private identifier is an unique internal code which distinguishes an experiment, project, equipment, equipment module, organization, research line from the rest.</rdfs:comment>
+        <rdfs:label>privateIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>A title is the name of a project, publication, or other artistic work.</rdfs:comment>
+        <rdfs:label>title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/healthcarevocab/v1#AcquisitionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/healthcarevocab/v1#AcquisitionDate">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>The acquisition date represents the date when an equipment was received by the organization.</rdfs:comment>
+        <rdfs:label>acquisitionDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/onto-ocds/ocds#contractTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/onto-ocds/ocds#contractTitle">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The contract value represents the name of the file where the agreement between the organization and the rest of organizations involved in the project was published.</rdfs:comment>
+        <rdfs:label>contract</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/vvo/ns#totalPayable -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/vvo/ns#totalPayable">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The financing value indicates the total payable for the financing.</rdfs:comment>
+        <rdfs:label>financing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdf.myexperiment.org/ontologies/base/public-announcement -->
+
+    <owl:DatatypeProperty rdf:about="http://rdf.myexperiment.org/ontologies/base/public-announcement">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The announcement value represents the name of the file where the project was published.</rdfs:comment>
+        <rdfs:label>announcement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/comment -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/comment">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Comments provide additional specifications or descriptions relevant to perform the experiment affecting the results but impossible to normalize (I.e., pre-treatment).</rdfs:comment>
+        <rdfs:label>comments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/vatID -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/vatID">
+        <rdfs:domain rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:comment>A VAT number is a unique identification number that&apos;s assigned to every business registered for VAT.</rdfs:comment>
+        <rdfs:label>vatID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/roh#ORCID -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/roh#ORCID">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:domain rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>The ORCID value is a persistent digital identifier (an ORCID iD) which every researcher owns and controls, and that distinguishes her/him from every other researcher.</rdfs:comment>
+        <rdfs:label>orcid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#JCRQuartile -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#JCRQuartile">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/AcademicArticle"/>
+        <rdfs:comment>Quartile rankings of journals in the category based on rank for the Journal Impact Factor.</rdfs:comment>
+        <rdfs:label>JCRQuartile</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#JCR_JIF -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#JCR_JIF">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/bibo/AcademicArticle"/>
+        <rdfs:comment>JCR measure of the frequency with which the average article in a journal has been cited in a particular year.</rdfs:comment>
+        <rdfs:label>JCR_JIF</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#accesories -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#accesories">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAssay"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfCharacterization"/>
+        <rdfs:comment>Accessories lists the name of the additional tools, adapters, or any additional options used to perform the assay/characterization experiment.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#adsorbedAmmount -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#adsorbedAmmount">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The adsorbed amount of refrigerant or adsorbate (Δx) is the difference of refrigerant concentrations (x) in between Isosteric lines of preheating and pre-cooling processes.</rdfs:comment>
+        <rdfs:label>adsorbedAmmount</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#asConditions -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#asConditions">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAssay"/>
+        <rdfs:comment>Values of the used conditions to perform the assay experiment that may assure the repetition of the experiment of the same sample with the same or similar results.</rdfs:comment>
+        <rdfs:label>asConditions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#asResults -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#asResults">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAssay"/>
+        <rdfs:comment>asResults provides a datafile containing the numeric values of the operating variables, boundary conditions, and measured properties that were measured by the sensors of the device during the assay experiment for each value of the acquisition variable.</rdfs:comment>
+        <rdfs:label>asResults</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#chConditions -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#chConditions">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfCharacterization"/>
+        <rdfs:comment>Values of the used conditions to perform the characterization experiment that may assure the repetition of the experiment of the same sample with the same or similar results.</rdfs:comment>
+        <rdfs:label>chConditions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#chResults -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#chResults">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfCharacterization"/>
+        <rdfs:comment>ChResults provides a datafile containing the numeric values of the operating variables, boundary conditions, and measured properties that were measured by the sensors of the device during the characterization experiment for each value of the acquisition variable.</rdfs:comment>
+        <rdfs:label>chResults</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#conductivity -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#conductivity">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The degree to which a specified material conducts electricity, calculated as the ratio of the current density in the material to the electric field which causes the flow of current.</rdfs:comment>
+        <rdfs:label>conductivity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#density -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#density">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Substance&apos;s mass per unit of volume.</rdfs:comment>
+        <rdfs:label>density</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#electricalAndElectrochemicalProperties -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#electricalAndElectrochemicalProperties">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Electrical properties refer to a material&apos;s ability to conduct electric current. The electrochemical properties of a biomaterial (typically of metals and alloys) are the material&apos;s characteristics in an electrochemically corrosive environment, including electrochemical potentials, reaction constants, etc.</rdfs:comment>
+        <rdfs:label>electricalAndElectrochemicalProperties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#equipmentModel -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#equipmentModel">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Model specifies the commercial identification of the equipment according to the nomenclature of the manufacturer.</rdfs:comment>
+        <rdfs:label>equipmentModel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#fundingScope -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#fundingScope">
+        <rdfs:domain rdf:resource="http://purl.org/cerif/frapo/FundingAgency"/>
+        <rdfs:comment>Defines if the funding source is European, National, Regional, ExtraEuropean, or direct funding by an Industry.</rdfs:comment>
+        <rdfs:label>fundingScope</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#heat -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#heat">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Thermal energy transferred between systems due to a temperature difference.</rdfs:comment>
+        <rdfs:label>heat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#image -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#image">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Name of the file where the representation of an experiment’s result or characteristic is shown.</rdfs:comment>
+        <rdfs:label>image</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isReactorSize -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isReactorSize">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#AmmoniaSynthesisEquipment"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenCompressionEquipment"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MethanolSynthesisEquipment"/>
+        <rdfs:comment>IsReactorSize establishes the reactor size (normally 10 L or 100 L).</rdfs:comment>
+        <rdfs:label>isReactorSize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#longName -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#longName">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:comment>Full name of the ResearchLine.</rdfs:comment>
+        <rdfs:label>longName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#manufacturer">
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Manufacturer indicates the name of the company that has assembled the equipment.</rdfs:comment>
+        <rdfs:label>manufacturer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#mass -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#mass">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Mass can be experimentally defined as a measure of the body&apos;s inertia, meaning the resistance to acceleration (change of velocity) when a net force is applied.</rdfs:comment>
+        <rdfs:label>mass</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#massToChargeRatio -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#massToChargeRatio">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Physical quantity relating the mass (quantity of matter) and the electric charge of a given particle, expressed in units of kilograms per coulomb (kg/C).</rdfs:comment>
+        <rdfs:label>massToChargeRatio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#measureProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#measureProperty">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument"/>
+        <rdfs:comment>Name of the physical property measured by the instrument.</rdfs:comment>
+        <rdfs:label>measureProperty</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#measureUnit -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#measureUnit">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument"/>
+        <rdfs:comment>A unit of measurement is a definite magnitude of a quantity, defined and adopted by convention or by law, that is used as a standard for measurement of the same kind of quantity.</rdfs:comment>
+        <rdfs:label>measureUnit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#measurerIns -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#measurerIns">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument"/>
+        <rdfs:comment>Measurer ins contains the name of the instrument used to measurer a relevant property of an experiment.</rdfs:comment>
+        <rdfs:label>measurerIns</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#particleSize -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#particleSize">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Notion introduced for comparing dimensions of solid particles (flecks), liquid particles (droplets), or gaseous particles (bubbles).</rdfs:comment>
+        <rdfs:label>particleSize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ph -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ph">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The pH of a solution is defined as the decimal logarithm of the reciprocal of the hydrogen ion activity, aH+.</rdfs:comment>
+        <rdfs:label>ph</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#product -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#product">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfSynthesis"/>
+        <rdfs:comment>Product stabilises the name or nature of the desired substance resulting from the synthetic experiment.</rdfs:comment>
+        <rdfs:label>product</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#projectScope -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#projectScope">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>Defines if the project is European, National, Regional, ExtraEuropean, or direct by a company.</rdfs:comment>
+        <rdfs:label>projectScope</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#propertyOfChEquipment -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#propertyOfChEquipment">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment"/>
+        <rdfs:comment>Property lists the name of the measured properties of the characterization equipment.</rdfs:comment>
+        <rdfs:label>propertyOfChEquipment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#publicationType -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#publicationType">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>The publication type is the type of published files depending on their goal or structure (article, technical report, etc).</rdfs:comment>
+        <rdfs:label>publicationType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#rawMaterials -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#rawMaterials">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfSynthesis"/>
+        <rdfs:comment>RawMaterials names the initial materials or substances used for the experiment which are converted into the product.</rdfs:comment>
+        <rdfs:label>rawMaterials</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#resultsOfChEquipment -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#resultsOfChEquipment">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment"/>
+        <rdfs:comment>Results links to the folder where all the raw data of the performed experiments are saved. The folder is named as the Identifier and each file is saved in the subfolder as the “IdExperiment”.</rdfs:comment>
+        <rdfs:label>resultsOfChEquipment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#shortName -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#shortName">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+        <rdfs:comment>Identify the research line with only one or two words.</rdfs:comment>
+        <rdfs:label>shortName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#softwareUsed -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#softwareUsed">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInSilico"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAdsorption"/>
+        <rdfs:comment>Name of software packages used to generate the data (Examples: VASP, xTB, DFTB+, Gromacs, LAMMPS, ANSYS-Fluent, COMSOL, SolidWorks, OpenLCA, Brightway, EcoInvent (database), R-CRAN, Python, Maple, Matlab/Octave, Excel, @Risk (add-in of Excel))</rdfs:comment>
+        <rdfs:label>softwareUsed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#synConditions -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#synConditions">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfSynthesis"/>
+        <rdfs:comment>SynConditions refers to the relevant operating conditions to perform the synthetic experiments whose control assures the repetition of such experiment with the same or similar result.</rdfs:comment>
+        <rdfs:label>synConditions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#techniqueUsed -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#techniqueUsed">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInSilico"/>
+        <rdfs:comment>Specific technique used in the simulation. Note: Some software packages may execute more than one technique, and there exist more than one software available for most techniques. (Examples: DFT, GFN-xTB, MM, CFD, microkinetics, coarse-grained, techno-economic analysis, sensitivity analysis, Monte Carlo sensitivity analysis, life-cycle assessment)</rdfs:comment>
+        <rdfs:label>techniqueUsed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#temperature -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#temperature">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The degree or intensity of heat present in a substance or object, especially as expressed according to a comparative scale and shown by a thermometer or perceived by touch.</rdfs:comment>
+        <rdfs:label>temperature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#thermalConductivity -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#thermalConductivity">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The thermal conductivity of a material is a measure of its ability to conduct heat.</rdfs:comment>
+        <rdfs:label>thermalConductivity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#timesCited -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#timesCited">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>The times cited of a publication is the number of times that publication appears cited in other resources.</rdfs:comment>
+        <rdfs:label>timesCited</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#urlScopus -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#urlScopus">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>Scopus is an abstract and indexing database with full-text links that is produced by the Elsevier Co. The url Scopus is its unique address.</rdfs:comment>
+        <rdfs:label>urlScopus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#viscosity -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#viscosity">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Viscosity is defined scientifically as a force multiplied by a time divided by an area. Thus its SI units are newton-seconds per square metre, or pascal-seconds.</rdfs:comment>
+        <rdfs:label>viscosity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#volumeEx -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#volumeEx">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Volume is a measure of regions in three-dimensional space. It is often quantified numerically using SI derived units (such as the cubic metre and litre) or by various imperial or US customary units (such as the gallon, quart, cubic inch).</rdfs:comment>
+        <rdfs:label>volumeEx</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#zetaPotential -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#zetaPotential">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>The potential difference existing between the surface of a solid particle immersed in a conducting liquid (e.g. water) and the bulk of the liquid.</rdfs:comment>
+        <rdfs:label>zetaPotential</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#isH2Productuion/PowerGeneration -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#isH2Productuion/PowerGeneration">
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SOECEquipment"/>
+        <rdfs:comment>IsH2Production/PowerGeneration establishes whether the SOEC module is working as an electrolyser to produce H2 or as a fuel cell to generate power.</rdfs:comment>
+        <rdfs:label>isH2Production/PowerGeneration</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#lightAbsorbed/transmitted/reflected -->
+
+    <owl:DatatypeProperty rdf:about="https://ciiae.org/ontologies/OntoCIIAE#lightAbsorbed/transmitted/reflected">
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>It refers to the absorption/transmission/reflection of light that takes place when matter captures electromagnetic radiation, converting the energy of photons to internal energy, transmitting it or reflecting it.</rdfs:comment>
+        <rdfs:label>lightAbsorbed/transmitted/reflected</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/vcard/ns#email">
+        <rdfs:domain rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>The email value represents the email address of a staff member.</rdfs:comment>
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:domain rdf:resource="http://schema.org/Place"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:domain rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule"/>
+        <rdfs:domain rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>A name is a word or set of words by which a person or thing is known, addressed, or referred to.</rdfs:comment>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/phone -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/phone">
+        <rdfs:domain rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:domain rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+        <rdfs:domain rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>A phone number is a number assigned to a telephone line for a specific phone or set of phones (as for an organization/department) that is used to call that phone.</rdfs:comment>
+        <rdfs:label>phone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://morelab.deusto.es/ontologies/swrcfe#projectType -->
+
+    <owl:DatatypeProperty rdf:about="https://morelab.deusto.es/ontologies/swrcfe#projectType">
+        <rdfs:domain rdf:resource="https://dbpedia.org/ontology/Project"/>
+        <rdfs:comment>The type of the project (agile, innovation, etc).</rdfs:comment>
+        <rdfs:label>projectType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#doi -->
+
+    <owl:DatatypeProperty rdf:about="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#doi">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>A digital object identifier (DOI) is a persistent identifier or handle used to uniquely identify various objects, standardized by the International Organization for Standardization (ISO).</rdfs:comment>
+        <rdfs:label>doi</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#eissn -->
+
+    <owl:DatatypeProperty rdf:about="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#eissn">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>e-ISSN (or eISSN) is a standard label for &quot;Electronic ISSN&quot;, the ISSN for the electronic media (online) version of a serial.</rdfs:comment>
+        <rdfs:label>eissn</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#volume -->
+
+    <owl:DatatypeProperty rdf:about="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#volume">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>Normally a volume will encompass an entire year&apos;s worth of a journal&apos;s issues. For example, a journal that is published four times yearly (quarterly) will have four issues in its yearly volume. Issues may be identified solely with numbers or with both numbers and date designations.</rdfs:comment>
+        <rdfs:label>volume</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher -->
+
+    <owl:DatatypeProperty rdf:about="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>An entity responsible for making the resource available.</rdfs:comment>
+        <rdfs:label>publisher</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.w3.org/2006/vcard/ns#url -->
+
+    <owl:DatatypeProperty rdf:about="https://www.w3.org/2006/vcard/ns#url">
+        <rdfs:domain rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>An URL is the address of a resource in a web page.</rdfs:comment>
+        <rdfs:label>url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Plant -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Plant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>A plant is a place where an industrial or manufacturing process takes place.</rdfs:comment>
+        <rdfs:label>Plant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ns.nature.com/terms/Organization -->
+
+    <owl:Class rdf:about="http://ns.nature.com/terms/Organization">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/vatID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>SUMO: An Organization is a corporate or similar institution. The members of an Organization typically have a common purpose or function. Note that this class also covers divisions, departments, etc. of organizations. For example, both the Shell Corporation and the accounting department at Shell would both be instances of Organization. Note too that the existence of an Organization is dependent on the existence of at least one member (since Organization is a subclass of Collection). Accordingly, in cases of purely legal organizations, a fictitious member should be assumed.\\\&quot;http://www.ontologyportal.org/</rdfs:comment>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://opendata.unex.es/def/ontouniversidad#Publicacion -->
+
+    <owl:Class rdf:about="http://opendata.unex.es/def/ontouniversidad#Publicacion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#publicationType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#publisher"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh#ORCID"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#timesCited"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#urlScopus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#doi"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#eissn"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.dublincore.org/specifications/bibo/bibo/bibo.rdf.xml#volume"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.w3.org/2006/vcard/ns#url"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A publication is a book, magazine, newspaper, or document in which information or stories are published.</rdfs:comment>
+        <rdfs:label>Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/cerif/frapo/FundingAgency -->
+
+    <owl:Class rdf:about="http://purl.org/cerif/frapo/FundingAgency">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#fundingScope"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://ns.nature.com/terms/Organization"/>
+        <rdfs:comment>An organization that provides funding for projects or resources, often in the form of grants awarded on the basis of competitive application.</rdfs:comment>
+        <rdfs:label>FundingAgency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/AcademicArticle -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/bibo/AcademicArticle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#JCRQuartile"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#JCR_JIF"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>An academic article is an academic work that is usually published in an academic journal. It contains original research results or reviews existing results.</rdfs:comment>
+        <rdfs:label>AcademicArticle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/TechnicalReport -->
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/TechnicalReport">
+        <rdfs:subClassOf rdf:resource="http://opendata.unex.es/def/ontouniversidad#Publicacion"/>
+        <rdfs:comment>A technical report is a formal report designed to convey technical information in a clear and easily accessible format.</rdfs:comment>
+        <rdfs:label>TechnicalReport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="http://schema.org/Place">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.archiveshub.ac.uk/def/location"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dbpedia.org/ontology/area"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>An installation is a place where there are buildings and equipment that have a particular purpose.</rdfs:comment>
+        <rdfs:label>Installation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000994 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000994">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#formPartOfProject"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://dbpedia.org/ontology/Project"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isLedByResearcher"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.archiveshub.ac.uk/def/file"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.businessgraph.io/ontology#isPublic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/comment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#adsorbedAmmount"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#conductivity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#density"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#heat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#image"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#mass"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#massToChargeRatio"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#particleSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ph"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#temperature"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#thermalConductivity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#viscosity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#volumeEx"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#zetaPotential"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#lightAbsorbed/transmitted/reflected"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>An experiment is an investigation that has the goal of verifying, falsifying, or establishing the validity of a hypothesis.</rdfs:comment>
+        <rdfs:label>Experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sw-portal.deri.org/ontologies/swportal#ResearchStaff -->
+
+    <owl:Class rdf:about="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff">
+        <rdfs:subClassOf rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>A researcher is a person who carries out academic or scientific research.</rdfs:comment>
+        <rdfs:label>Researcher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff -->
+
+    <owl:Class rdf:about="http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff">
+        <rdfs:subClassOf rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>Operates field, office, laboratory, and/or shop equipment used in support of research projects. Assists with the setup of experiments and procedures. Collects and logs complex data. Performs data analysis involving routine procedures. Troubleshoots system and technical problems.</rdfs:comment>
+        <rdfs:label>Technician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Department -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Department">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#hasAssigned"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#departmentHeadedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.businessgraph.io/ontology#isPublic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A unit within a larger organization that addresses a specific subject or area of activity.</rdfs:comment>
+        <rdfs:label>Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Equipment -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Equipment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#locatedIn"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/Place"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iais.fraunhofer.de/vocabs/rami#manual"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/healthcarevocab/v1#AcquisitionDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#equipmentModel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#manufacturer"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Experimental equipment is the set of tools, devices, materials, computer systems assembled for performing the experiment. Reference: following Collins Softback English Dictionary, HarperCollins Publishers, Glasgow, 1993.</rdfs:comment>
+        <rdfs:label>Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Laboratory -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Laboratory">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>A laboratory is a room or building equipped for scientific experiments, research, or teaching, or for the manufacture of drugs or chemicals.</rdfs:comment>
+        <rdfs:label>Laboratory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AEMEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AEMEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used to H2 production by water electrolysis using an Anion Exchange Membrane electrolyser (AEM)</rdfs:comment>
+        <rdfs:label>AEMEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#Administrative -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#Administrative">
+        <rdfs:subClassOf rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>In this category are attached the jobs with a medium degree of complexity, autonomy, initiative and responsibility, capacity of teamwork, that develop specialized administrative tasks of support to a Management director or Unit/Area Head. The supervision of its tasks proceeds of Management directors or Unit/Area Heads, depending on the case. To access this category is needed a FPGS degree or demonstrable professional experience.</rdfs:comment>
+        <rdfs:label>Administrative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AdsorptionSeparationEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AdsorptionSeparationEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to separate compounds using their differential adsorption on a stationary solid component</rdfs:comment>
+        <rdfs:label>AdsorptionSeparationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AmmoniaSynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AmmoniaSynthesisEquipment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isReactorSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used for ammonia synthesis by N2 catalytic hydrogenation, and subsequent ammonia purification processes</rdfs:comment>
+        <rdfs:label>AmmoniaSynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AssayEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AssayEquipment">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Assay equipment is the automatic device used to perform a assay experiment</rdfs:comment>
+        <rdfs:label>AssayEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AutoclaveEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AutoclaveEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to perform reactions at high pressure and temperature</rdfs:comment>
+        <rdfs:label>AutoclaveEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AuxiliaryHydrogenEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AuxiliaryHydrogenEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of auxiliary equipment used for hydrogen production, storage and utilisation, such as heat exchanger, storage tanks, water deionizers...</rdfs:comment>
+        <rdfs:label>AuxiliaryHydrogenEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#AuxiliaryRecyclingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#AuxiliaryRecyclingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of auxiliary equipment used for recycling processes, such as auxiliary tanks, material collectors...</rdfs:comment>
+        <rdfs:label>AuxiliaryRecyclingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#BiologicalSynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#BiologicalSynthesisEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SynthesisEquipment"/>
+        <rdfs:comment>Synthesis equipment using microorganisms  to prepare a material</rdfs:comment>
+        <rdfs:label>BiologicalSynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#CO2DACEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#CO2DACEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used to CO2 capture directly from the air</rdfs:comment>
+        <rdfs:label>CO2DACEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#CharacterizationEquipment">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Characterization equipment is the automatic device used to perform a characterization experiment</rdfs:comment>
+        <rdfs:label>CharacterizationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ChemicalSynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ChemicalSynthesisEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SynthesisEquipment"/>
+        <rdfs:comment>Synthesis equipment using solvothermal method (impregnation, precipitation, sol-gel) to prepare a material</rdfs:comment>
+        <rdfs:label>ChemicalSynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#CuttingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#CuttingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#FabLabEquipment"/>
+        <rdfs:comment>Group of equipment used for CO2, N2 or pressure water cutting</rdfs:comment>
+        <rdfs:label>CuttingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#Director -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#Director">
+        <rdfs:subClassOf rdf:resource="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff"/>
+        <rdfs:comment>A member of the board of people that manages or oversees the affairs of a business.</rdfs:comment>
+        <rdfs:label>Director</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ElectrochemicalSeparationEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ElectrochemicalSeparationEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to separate the metal ion of interest under the influence of an applied potential</rdfs:comment>
+        <rdfs:label>ElectrochemicalSeparationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#EquipmentModule">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#groupEquipment"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Group of different equipment that belong to the same module (3DPrinting, Cutting, etc).</rdfs:comment>
+        <rdfs:label>EquipmentModule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#EvaporationDryingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#EvaporationDryingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to concentrate the compound of interest by eliminating solvents</rdfs:comment>
+        <rdfs:label>EvaporationDryingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentInLab -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInLab">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:label>ExperimentInLab</rdfs:label>
+    </owl:Class>
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Experiments which are operated to find out about the behaviour of a process before using it on a large industrial scale.</rdfs:comment>
+        <rdfs:label>ExperimentInPilotPlant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Experiments to build an idea with materials, being a preceding experiment to piloting.</rdfs:comment>
+        <rdfs:label>ExperimentInPrototyping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentInSilico -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInSilico">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Experiment done in a personal computer or high-performance computer.</rdfs:comment>
+        <rdfs:label>ExperimentInSilico</rdfs:label>
+    </owl:Class>
+    
+    <!--owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInSilico2">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000994"/>
+        <rdfs:comment>Experiment done in a personal computer or high-performance computer.</rdfs:comment>
+        <rdfs:label>ExperimentInSilico2</rdfs:label>
+    </owl:Class-->
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAdsorption -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAdsorption">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping"/>
+        <rdfs:comment>ExperimentOfAdsorption refeers to performed experiments in the adsorption prototype.</rdfs:comment>
+        <rdfs:label>ExperimentOfAdsorption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAssay -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfAssay">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInLab"/>
+        <rdfs:comment>Direct measurement of catalytic performance of a sample in a specific chemical reaction or application development with an automatic setup by means of the controlled modification of one or more operating conditions (input(s)).</rdfs:comment>
+        <rdfs:label>ExperimentOfAssay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfCharacterization -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfCharacterization">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInLab"/>
+        <rdfs:comment>Direct or indirect measurement of one or more properties (output(s)) of a sample performed for the specific sensors  of an automatic setup by means of the controlled modification of one or more operating conditions (input(s)).</rdfs:comment>
+        <rdfs:label>ExperimentOfCharacterization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfElectrolysisAndHighFreq -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfElectrolysisAndHighFreq">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping"/>
+        <rdfs:label>ExperimentOfElectrolysisAndHighFrequencyBatteries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfElectrolysisAndLowFreq -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfElectrolysisAndLowFreq">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping"/>
+        <rdfs:label>ExperimentOfElectrolysisAndLowFrequencyBatteries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfHeterogeneusCatalysis -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfHeterogeneusCatalysis">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPrototyping"/>
+        <rdfs:label>ExperimentOfHeterogeneusCatalysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfSynthesis -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ExperimentOfSynthesis">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#rawMaterials"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#product"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInLab"/>
+        <rdfs:comment>Synthesis is a process of obtaining a desired product from specific raw materials using certain equipment under specified operating conditions.</rdfs:comment>
+        <rdfs:label>ExperimentOfSynthesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#FabLabEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#FabLabEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:comment>Tools and machinery used for designing, prototyping and manufacturing</rdfs:comment>
+        <rdfs:label>FabLabEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#FeasibilityExperiment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#FeasibilityExperiment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant"/>
+        <rdfs:comment>Experiment for studying the techno-economic conditions of a process and its potential revenue.</rdfs:comment>
+        <rdfs:label>FeasibilityExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#FlotationEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#FlotationEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to selectively separate materials based on differences in their hydrophobicity</rdfs:comment>
+        <rdfs:label>FlotationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#FlowBatteriesEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#FlowBatteriesEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:label>FlowBatteriesEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#HTFEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#HTFEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment"/>
+        <rdfs:comment>Group of equipment designed for Heat Transfer Fluids (HTFs) testing and analysis</rdfs:comment>
+        <rdfs:label>HTFEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#HydrogenCompressionEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#HydrogenCompressionEquipment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isReactorSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used to increase the pressure of the hydrogen between different modules</rdfs:comment>
+        <rdfs:label>HydrogenCompressionEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:comment>Equipment designed for hydrogen production, storage and application testing</rdfs:comment>
+        <rdfs:label>HydrogenEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#HydrogenStorageEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#HydrogenStorageEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used to store the produced hydrogen by the electrolysers</rdfs:comment>
+        <rdfs:label>HydrogenStorageEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#JuniorDoctor -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#JuniorDoctor">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>In this professional group are contained the jobs with a profile with a Doctor degree in Science or Engineering. The minimum experience is a doctoral thesis in related topics. No previous postdoctoral experience is needed, but it is necessary a minimum of total investigator period of 4 years. The activities related with this position are the supervision and guide of doctoral students, participation in the elaboration of proposals/projects within the area of the Junior Doctor and their execution.</rdfs:comment>
+        <rdfs:label>JuniorDoctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#LeachingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#LeachingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to extract certain materials from a carrier into a liquid</rdfs:comment>
+        <rdfs:label>LeachingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#Level1Technician -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#Level1Technician">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff"/>
+        <rdfs:comment>A Level 1 technician participates in processes and/or projects, carrying out technic tasks of complexity and qualification, to achieve an unit&apos;s objectives, participating in the elaboration of proposals and new initiatives. The supervision of his/her results or the tracking of his/her activities proceeds from Management positions, Unit Heads or Areas, depending on the case. It is needed, at least, a University Degree or demonstrable professional experience.</rdfs:comment>
+        <rdfs:label>Level1Technician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#Level2Technician -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#Level2Technician">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff"/>
+        <rdfs:comment>A Level 2 technician position has a medium degree of complexity, autonomy, initiative and responsibility, where support tasks are developed in order to achieve an unit&apos;s objectives, or inside process and/or projects. These activities are developed by a bigger supervision with concrete and precise instructions related with operative procedures, whose supervision proceeds from Management positions, Unit Heads or Areas, depending on the case. It is needed, at least, a FPGS degree or demonstrable professional experience.</rdfs:comment>
+        <rdfs:label>Level2Technician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#LiquidLiquidExtractionEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#LiquidLiquidExtractionEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to separate compounds or metal complexes, based on their relative solubilities in two different immiscible liquids</rdfs:comment>
+        <rdfs:label>LiquidLiquidExtractionEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MachiningEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MachiningEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#FabLabEquipment"/>
+        <rdfs:comment>Group of equipment used for milling, lathing, drilling, etc.</rdfs:comment>
+        <rdfs:label>MachiningEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MasterJuniorTechnician -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MasterJuniorTechnician">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff"/>
+        <rdfs:comment>Technician with a Master&apos;s Degree in scientific-technic areas related with research and development activities and projects or industrial activities.No previous work experience is needed. A technician of this type develops his/her work with autonomy and responsibility within the framework of the guidelines of, depending on the case, Unit Heads, senior doctors and master senior technician in collaboration with the rest of the people working in his/her area or unit.</rdfs:comment>
+        <rdfs:label>MasterJuniorTechnician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MasterSeniorTechnician -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MasterSeniorTechnician">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#TechnicalStaff"/>
+        <rdfs:comment>A Master Senior Technician oversees concrete areas of research and development, with high demands for training specialization and initial work experience, which will lead work groups and will be responsible of achieving and consolidating progress in accordance with the instructions received by de Unit Heads. It is needed a Master&apos;s Degree in scientific-technic areas related to research and development activities and projects or industrial activities, with a minimum demonstrable specialization and experience of, at least, 5 years.</rdfs:comment>
+        <rdfs:label>MasterSeniorTechnician</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MeasureInstrument">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#measureProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#measureUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#measurerIns"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>Device used to measure physical quantities of relevant properties of an experiment (like temperature or volume) related with a characterization equipment.</rdfs:comment>
+        <rdfs:label>MeasureInstrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MethanolSynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MethanolSynthesisEquipment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isReactorSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used for methanol synthesis by CO2 catalytic hydrogenation, and subsequent methanol purification processes</rdfs:comment>
+        <rdfs:label>MethanolSynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MicrogridEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MicrogridEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:comment>Group of equipment designed to simulate different methods of electricity generation and consumption in conjunction with others</rdfs:comment>
+        <rdfs:label>MicrogridEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#MoltenSaltsEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#MoltenSaltsEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment"/>
+        <rdfs:comment>Group of equipment designed for Molten Salts testing and analysis.</rdfs:comment>
+        <rdfs:label>MoltenSaltsEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#PCMEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#PCMEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment"/>
+        <rdfs:comment>Group of equipment designed for Phase Change Materials (PCMs) testing and analysis</rdfs:comment>
+        <rdfs:label>PCMEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#PhysicalSynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#PhysicalSynthesisEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#SynthesisEquipment"/>
+        <rdfs:comment>Synthesis equipment using physical methods (sedimentation process, rotor speed ball mill, high energy ball mill) to prepare a material</rdfs:comment>
+        <rdfs:label>PhysicalSynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Devices, tanks and piping used for pilot plants experiments (larger scale than laboratory).</rdfs:comment>
+        <rdfs:label>PilotPlantEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#Predoctoral -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#Predoctoral">
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>In this professional group are contained doctoral students whose objective is the realization of a doctoral thesis within the determined lines of research. The minimum qualification required is a Science or Engineering Degree/Master. Their labour is the execution of the project to which they are registered and prepare production elements and scientific dissemination and the set of activities that make up the doctoral program to which they are assigned according to the current Statute of predoctoral research personnel in training.</rdfs:comment>
+        <rdfs:label>Predoctoral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:comment>Group of equipment employed to find out about the behaviour of energy storage device recycling processes before using it on a large industrial scale</rdfs:comment>
+        <rdfs:label>RecyclingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ResearchLine -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SeniorDoctor"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#researchLineCoordinatedBy"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#longName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#shortName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A line of research includes a particular series of published articles on the same topic.</rdfs:comment>
+        <rdfs:label>ResearchLine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SOECEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SOECEquipment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isH2Productuion/PowerGeneration"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#HydrogenEquipment"/>
+        <rdfs:comment>Group of equipment used to H2 production by water electrolysis or power generation using a solid oxide exchange cell (SOEC)</rdfs:comment>
+        <rdfs:label>SOECEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ScalingUpExperiment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ScalingUpExperiment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant"/>
+        <rdfs:comment>Experiment for taking prototypes into larger plants, usually previous step for operating at industrial scale.</rdfs:comment>
+        <rdfs:label>ScalingUpExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SeniorDoctor -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SeniorDoctor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#coordinatorOfResearchLine"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ResearchLine"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+        <rdfs:comment>This professional group is made up of personnel with a Doctor degree in Science or Engineering. It is needed a postdoctoral work experience of 2 years and/or a postdoctoral stay and to have previously managed European projects and/or national/regional related with their area of specialization. They develop their duties with autonomy, initiative and responsibility about the research lines in which they are assigned. They coordinate the diary work of the staff assigned with their line of work. They have the obligation to monitor the projects that fall within their area.</rdfs:comment>
+        <rdfs:label>SeniorDoctor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SolidHandlingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SolidHandlingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to load, unload and carry solid materials</rdfs:comment>
+        <rdfs:label>SolidHandlingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SolidLiquidSeparationEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SolidLiquidSeparationEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to separate mixtures of a liquid and a solid</rdfs:comment>
+        <rdfs:label>SolidLiquidSeparationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SolidTreatmentEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SolidTreatmentEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#RecyclingEquipment"/>
+        <rdfs:comment>Group of equipment used to perform physical and mechanical pre-treatment to solid materials</rdfs:comment>
+        <rdfs:label>SolidTreatmentEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SortionEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SortionEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment"/>
+        <rdfs:comment>Group of equipment designed for granular solid sorption in moving bed testing and analysis</rdfs:comment>
+        <rdfs:label>SortionEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#StabilityExperiment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#StabilityExperiment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant"/>
+        <rdfs:comment>Experiment for determining the real behaviour of a material during a long period of time.</rdfs:comment>
+        <rdfs:label>StabilityExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#SynthesisEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#SynthesisEquipment">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Equipment"/>
+        <rdfs:comment>Synthesis equipment is the set of tools, devices or materials used to perform a synthesis of a material that are not consumed during the process</rdfs:comment>
+        <rdfs:label>SynthesisEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ThermalStorageEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#PilotPlantEquipment"/>
+        <rdfs:comment>Equipment designed to store and study thermal energy in multiple ways.</rdfs:comment>
+        <rdfs:label>ThermalStorageEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#UnitDirector1 -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#UnitDirector1">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:comment>A Unit Director 1 makes decisions and/or participates in their development, facing high complexity and responsibility tasks and problems, whose resolution requires a great interpretative capacity. To access this group, it is needed an University Degree and a demonstrable professional experience of, at least, 10 years.</rdfs:comment>
+        <rdfs:label>UnitDirector1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#UnitDirector2 -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#UnitDirector2">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#Director"/>
+        <rdfs:comment>A Unit Director 2 makes decisions and/or participates in their development, facing high complexity and responsibility tasks and problems, whose resolution requires a great interpretative capacity. His/her decisions are supervised by the Leadership Unit 1 members. To access this group, it is needed a University Degree and a demonstrable professional experience of, at least, 5 years.</rdfs:comment>
+        <rdfs:label>UnitDirector2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#ValidationExperiment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#ValidationExperiment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#ExperimentInPilotPlant"/>
+        <rdfs:comment>Experiment for accreditation of certain measures or behaviours of a system or one of its parts.</rdfs:comment>
+        <rdfs:label>ValidationExperiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ciiae.org/ontologies/OntoCIIAE#3DPrintingEquipment -->
+
+    <owl:Class rdf:about="https://ciiae.org/ontologies/OntoCIIAE#3DPrintingEquipment">
+        <rdfs:subClassOf rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#FabLabEquipment"/>
+        <rdfs:comment>Group of equipment used to FDM or resin design, printing and testing</rdfs:comment>
+        <rdfs:label>3DPrintingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://dbpedia.org/ontology/Project -->
+
+    <owl:Class rdf:about="https://dbpedia.org/ontology/Project">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#isCoordinatedByResearcher"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://sw-portal.deri.org/ontologies/swportal#ResearchStaff"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.businessgraph.io/ontology#isPublic"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#projectScope"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/hasEndDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/hasProjectIdentifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/cerif/frapo/hasStartDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/onto-ocds/ocds#contractTitle"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vvo/ns#totalPayable"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rdf.myexperiment.org/ontologies/base/public-announcement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://morelab.deusto.es/ontologies/swrcfe#projectType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>A project is an individual or collaborative enterprise that is carefully planned to achieve a particular aim.</rdfs:comment>
+        <rdfs:label>Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/seas/Office -->
+
+    <owl:Class rdf:about="https://w3id.org/seas/Office">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment>An office is a room, set of rooms, or building where the business of a commercial or industrial organization or of a professional person is conducted.</rdfs:comment>
+        <rdfs:label>Office</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ebu.ch/metadata/ontologies/ebucore/#Staff -->
+
+    <owl:Class rdf:about="https://www.ebu.ch/metadata/ontologies/ebucore/#Staff">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ciiae.org/ontologies/OntoCIIAE#belongToDepartment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://vivoweb.org/ontology/core#Department"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/vcard/ns#email"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/phone"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>The staff of an organization refers to all the people employed by that particular organization.</rdfs:comment>
+        <rdfs:label>Staff</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+
+
